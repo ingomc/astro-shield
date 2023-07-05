@@ -1,81 +1,61 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+export let counter = 7;
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
-	</main>
+<header class="s:bg s:p-2 s:box-shadow-md s:mb-4 s:z-100" style="position:sticky; top:0; left:0;">
+	<div class="s:container s:d-flex s:justify-between s:items-center">
+		<div>
+			<img class="logo s:my-2" src="./logo-huk-md.svg" alt="Huk-Logo">
+		</div>
+		<div class="s:d-flex s:items-center">
+			<s-badge color="highlight" content={counter} inline="true">Unlegesen</s-badge>
+			<s-button color="accent" size="sm">Jetzt Tarif berechnen</s-button>
+		</div>
+	</div>
+</header>
+  <main class="s:container">
+    <h1>Welcome to Shield-Astro Demo</h1>
+    <p class="instructions">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio excepturi modi maiores, aliquam velit eaque esse? Cum fugiat reiciendis necessitatibus? Deserunt magni, quibusdam vero adipisci exercitationem ipsum possimus aliquam. Sapiente.
+    </p>
+    <hr />
+    <s-button id="testbutton">custom sClick-Event and get Alert</s-button>
+    <hr />
+    <s-banner id="banner"
+      dismissable="true"
+      leading-text="Leading-Text"
+      supporting-text="Das ist der Supporting-Text"
+    >
+      <p slot="content">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+        eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+        voluptua.
+      </p>
+      <div
+        class="s:flex-wrap s:d-flex s:flex-column s:sm:flex-row"
+        slot="action"
+      >
+        <s-button size="sm" variant="outlined">Primäre Aktion</s-button>
+        <s-button size="sm" variant="text">Sekundäre Aktion</s-button>
+      </div>
+    </s-banner>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	.logo {
+		display:block;
+		width: clamp(100px, 80%, 240px);
 	}
 </style>
+
+<script>
+  function handleClick (title: string) {
+	alert(`${title}-button clicked!`);
+
+  }
+  document.getElementById("testbutton").addEventListener("sClick", () => handleClick('testbutton'));
+  document.getElementById("banner").addEventListener("sRemove",  () => handleClick('remove-banner'));
+</script>
