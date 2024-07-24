@@ -3,27 +3,27 @@
 ---
 
 <div class="stage">
-    <section class="buhne">
-        <div
-            class="buhne--hideImgOnMobile buhne__background"
-            role="presentation"
-        >
-            <img
-                alt="Zwei Hände, die sich berühren"
-                class="noscript__image"
-                src="/media/top-haende-reichen.scale.buehneL.jpg"
-            />
-        </div>
-        <!-- <div class="row">
-            <div class="col col--nomb">
-                <article class="buhne--hideImgOnMobile buhne__copy">
-                    <div class="wrapper">
-                        <h1 class="buhne__copy-headline">Hilfsfonds</h1><span
-                            class="buhne__copy-subheadline"
-                            >Für Menschen, die in existenzielle Not geraten sind</span>
-                    </div>
-                </article>
-            </div>
-        </div> -->
-    </section>
+    <img
+        role="presentation"
+        alt="Zwei Hände, die sich berühren"
+        src="/media/top-haende-reichen.scale.buehneL.jpg"
+    />
 </div>
+
+<style>
+    .stage {
+        position: relative;
+        background: yellow;
+    }
+    .stage:before {
+        content: "";
+        position: absolute;
+        inset:0;
+        z-index: 1;
+        background-color: var(--color-accent-400);
+        mix-blend-mode: overlay;
+    }
+    img {
+        /* filter:grayscale(0.8) contrast(1.8) brightness(1.6); */
+    }
+</style>

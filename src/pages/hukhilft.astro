@@ -3,6 +3,7 @@ import ColoredSection from "../components/ColoredSection.astro";
 import Header from "../components/Header.astro";
 import Stage from "../components/Stage.astro";
 import Layout from "../layouts/Layout.astro";
+import { Icon } from 'astro-icon/components'
 ---
 
 <Layout title="Welcome to Astro.">
@@ -13,7 +14,7 @@ import Layout from "../layouts/Layout.astro";
             <div class="s:d-grid">
                 <div style="--col:12; --col-md: 6;">
                     <div class="s:text-hyphens s:prose s:marker-bullet">
-                        <h2 class="s:d-flex s:items-center"><img src="/media/shakehands.svg" alt="Händeschütteln" role="presentation" width="60" />Was wir tun</h2>
+                        <h2 class="s:d-flex s:items-center"><Icon name="shakehands" class="s:text-primary s:md:d-hidden" size="60" />Was wir tun</h2>
                         <p>
                             „HUK hilft“ ist ein Hilfsfonds für Menschen, die durch schicksalhafte Extremsituationen in <strong>existenzielle Not</strong> geraten sind. Er ist mit <strong>10 Millionen Euro</strong> ausgestattet und wird in Härtefällen helfen. Wir wollen einen Neuanfang erleichtern.
                         </p>
@@ -29,11 +30,11 @@ import Layout from "../layouts/Layout.astro";
         </ColoredSection>
         
         <ColoredSection class="s:bg-primary-subdued">
-            <h2 class="s:text-center">Wen wir fördern</h2>
+            <h2 class="s:md:text-center">Wen wir fördern</h2>
             <div class="s:d-grid">
                 <div class="s:clearfix" style="--col:12; --col-md: 8;">
                     <div class="s:float-right s:mt-1 s:ml-4 s:md:d-hidden">
-                        <img src="/media/rlv.svg" width="100" height="100">
+                        <Icon name="rlv" class="s:text-primary" size="100">
                     </div>
                     <ul class="s:marker-check">
                         <li class="s:my-2">
@@ -51,20 +52,20 @@ import Layout from "../layouts/Layout.astro";
                     </ul>
                 </div>
                 <div style="--col:12; --col-md: 4;" class="s:d-hidden s:md:d-flex s:items-center s:justify-end">
-                    <img src="/media/rlv.svg" width="200" height="200">
+                    <Icon name="rlv" class="s:text-primary" size="200">
                 </div>
             </div>
         </ColoredSection>
 
         <ColoredSection>
-            <h2 class="s:text-center">Antrag stellen</h2>
+            <h2 class="s:md:text-center">Antrag stellen</h2>
             <div class="s:d-grid">
                 <div style="--col:12; --col-md: 4;" class="s:d-hidden s:md:d-flex s:items-center s:justify-center">
-                    <img src="/media/vertragsuebersicht.svg" width="200" height="200">
+                    <Icon name="vertragsuebersicht" class="s:text-primary" size="200">
                 </div>
                 <div class="s:clearfix" style="--col:12; --col-md: 8;">
                     <div class="s:float-right s:mt-1 s:ml-4 s:md:d-hidden">
-                        <img src="/media/vertragsuebersicht.svg" width="100" height="100">
+                        <Icon name="vertragsuebersicht" class="s:text-primary" size="100">
                     </div>
                     <p>
                         Wenn Sie <b>Unterstützung</b> bei „HUK hilft“ beantragen möchten, können Sie uns hier Ihre <b>Notlage schildern</b>. 
@@ -86,271 +87,38 @@ import Layout from "../layouts/Layout.astro";
             </div>
         </ColoredSection>
 
+        <ColoredSection class="s:bg-primary-subdued">
+            <h2 class="s:md:text-center">Eine emotionale Reise ins Ahrtal</h2>
+
+
+            <div class="s:d-grid">
+                <div style="--col:12; --col-md: 8; --order:1; --order-md:0">
+                    <p>
+                        Vor über 2 Jahren war die Flutkatastrophe im Ahrtal die Initialzündung für die Gründung des Hilfsfonds HUK hilft. Viele Menschen dort haben alles verloren. HUK hilft konnte mit Spenden von über einer Million Euro Neustarts erleichtern und zumindest finanzielle Sorgen lindern.
+                    </p>
+                    <p>
+                        Wir wollten wissen, wie es heute dort aussieht. Wie geht es den Menschen? Sind unsere Spenden gut angekommen? Wir haben Flutopfer getroffen, die immer noch mit den Auswirkungen der Katastrophe kämpfen - psychisch, körperlich, finanziell. Wir haben viele Geschichte von Angst und Belastung erfahren, aber auch Berichte von Mut und unglaublicher Hilfsbereitschaft.
+                    </p>
+                    <p>
+                        Im Ahrtal ist viel passiert, es ist aber auch noch sehr viel zu tun.
+                    </p>
+        
+                </div>
+                <div class="s:d-flex s:items-start" style="--col:12; --col-md: 4;  --order:0;">
+                    <a href="https://www.youtube.com/watch?v=VP4c4uwvoeQ" target="_blank">
+                        <img src="/media/video-hukhilft.png" alt="Vorschaubild HUKhilft Video" loading="lazy" width="500" height="283">
+                    </a>
+                </div>
+            </div>
+        </ColoredSection>  
+
 
 
         <div class="content">
             <div class="stripe stripe--content">
                 
       
-                <div>
-                    <div class="s:d-hidden s:md:d-block">
-                        <div>
-                            <div class="s:container">
-                                <div
-                                    class="s:d-grid s:gap-y-0"
-                                    style="--g-cols: 12"
-                                >
-                                    <div
-                                        style="--col: 12; --col-md: 8"
-                                        class="s:self-start s:pt-10 s:md:pt-14 s:pb-12 s:md:pb-20"
-                                    >
-                                        <div class="">
-                                            <div class="c_textimage_v2">
-                                                <div class="s:gap-y-4">
-                                                    <div>
-                                                        <div
-                                                            class="s:text-hyphens s:prose s:marker-bullet"
-                                                        >
-                                                            <h2
-                                                                class="s:text-regular"
-                                                                style="text-align: left;"
-                                                            >
-                                                                <b
-                                                                    >Eine
-                                                                    emotionale
-                                                                    Reise ins
-                                                                    Ahrtal</b
-                                                                ><br />
-                                                            </h2>
-                                                            <p>
-                                                                Vor über 2
-                                                                Jahren war die
-                                                                Flutkatastrophe
-                                                                im Ahrtal die
-                                                                Initialzündung
-                                                                für die Gründung
-                                                                des Hilfsfonds
-                                                                HUK hilft. Viele
-                                                                Menschen dort
-                                                                haben alles
-                                                                verloren. HUK
-                                                                hilft konnte mit
-                                                                Spenden von über
-                                                                einer Million
-                                                                Euro Neustarts
-                                                                erleichtern und
-                                                                zumindest
-                                                                finanzielle
-                                                                Sorgen lindern.
-                                                            </p>
-                                                            <p>
-                                                                Wir wollten
-                                                                wissen, wie es
-                                                                heute dort
-                                                                aussieht. Wie
-                                                                geht es den
-                                                                Menschen? Sind
-                                                                unsere Spenden
-                                                                gut angekommen?
-                                                                Wir haben
-                                                                Flutopfer
-                                                                getroffen, die
-                                                                immer noch mit
-                                                                den Auswirkungen
-                                                                der Katastrophe
-                                                                kämpfen -
-                                                                psychisch,
-                                                                körperlich,
-                                                                finanziell. Wir
-                                                                haben viele
-                                                                Geschichte von
-                                                                Angst und
-                                                                Belastung
-                                                                erfahren, aber
-                                                                auch Berichte
-                                                                von Mut und
-                                                                unglaublicher
-                                                                Hilfsbereitschaft.
-                                                            </p>
-                                                            <p>
-                                                                Im Ahrtal ist
-                                                                viel passiert,
-                                                                es ist aber auch
-                                                                noch sehr viel
-                                                                zu tun.<br />
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div
-                                        style="--col: 12; --col-md: 4"
-                                        class="s:self-start s:pt-10 s:md:pt-14 s:pb-12 s:md:pb-20"
-                                    >
-                                        <div class="">
-                                            <div class="c_textimage_v2">
-                                                <div
-                                                    class="s:d-flex s:flex-col s:items-center s:gap-y-4"
-                                                >
-                                                    <div>
-                                                        <a
-                                                            href="https://www.youtube.com/watch?v=VP4c4uwvoeQ"
-                                                            target="_blank"
-                                                        >
-                                                            <img
-                                                                src="/media/video-hukhilft.png"
-                                                                alt="Vorschaubild HUKhilft Video"
-                                                                loading="lazy"
-                                                            />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="s:md:d-hidden">
-                        <div>
-                            <div class="s:container">
-                                <div
-                                    class="s:d-grid s:gap-y-0"
-                                    style="--g-cols: 12"
-                                >
-                                    <div
-                                        style="--col: 12"
-                                        class="s:self-start s:pt-10 s:md:pt-14 s:pb-5 s:md:pb-10"
-                                    >
-                                        <div class="">
-                                            <div class="c_textimage_v2">
-                                                <h2
-                                                    class="s:text-regular s:pb-3 s:md:pb-6"
-                                                >
-                                                    Eine emotionale Reise ins
-                                                    Ahrtal
-                                                </h2>
-
-                                                <div
-                                                    class="s:d-flex s:flex-col s:items-center s:gap-y-4"
-                                                >
-                                                    <div>
-                                                        <a
-                                                            href="https://www.youtube.com/watch?v=VP4c4uwvoeQ"
-                                                            target="_blank"
-                                                        >
-                                                            <img
-                                                                src="/media/video-hukhilft.png"
-                                                                alt="Vorschaubild HUKhilft Video"
-                                                                loading="lazy"
-                                                            />
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="s:md:d-hidden">
-                        <div>
-                            <div class="s:container">
-                                <div
-                                    class="s:d-grid s:gap-y-0"
-                                    style="--g-cols: 12"
-                                >
-                                    <div
-                                        style="--col: 12"
-                                        class="s:self-start s:pt-0 s:pb-12 s:md:pb-20"
-                                    >
-                                        <div class="">
-                                            <div class="c_textimage_v2">
-                                                <div class="s:gap-y-4">
-                                                    <div>
-                                                        <div
-                                                            class="s:text-hyphens s:prose s:marker-bullet"
-                                                        >
-                                                            <p>
-                                                                Vor über 2
-                                                                Jahren war die
-                                                                Flutkatastrophe
-                                                                im Ahrtal die
-                                                                Initialzündung
-                                                                für die Gründung
-                                                                des Hilfsfonds
-                                                                HUK hilft. Viele
-                                                                Menschen dort
-                                                                haben alles
-                                                                verloren. HUK
-                                                                hilft konnte mit
-                                                                Spenden von über
-                                                                einer Million
-                                                                Euro Neustarts
-                                                                erleichtern und
-                                                                zumindest
-                                                                finanzielle
-                                                                Sorgen lindern. <br
-                                                                />
-                                                            </p>
-                                                            <p>
-                                                                Wir wollten
-                                                                wissen, wie es
-                                                                heute dort
-                                                                aussieht. Wie
-                                                                geht es den
-                                                                Menschen? Sind
-                                                                unsere Spenden
-                                                                gut angekommen?
-                                                                Wir haben
-                                                                Flutopfer
-                                                                getroffen, die
-                                                                immer noch mit
-                                                                den Auswirkungen
-                                                                der Katastrophe
-                                                                kämpfen -
-                                                                psychisch,
-                                                                körperlich,
-                                                                finanziell. Wir
-                                                                haben viele
-                                                                Geschichte von
-                                                                Angst und
-                                                                Belastung
-                                                                erfahren, aber
-                                                                auch Berichte
-                                                                von Mut und
-                                                                unglaublicher
-                                                                Hilfsbereitschaft.
-                                                            </p>
-                                                            <p>
-                                                                Im Ahrtal ist
-                                                                viel passiert,
-                                                                es ist aber auch
-                                                                noch sehr viel
-                                                                zu tun.<br />
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
                 <div>
                     <div class="s:d-hidden s:md:d-block">
