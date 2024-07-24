@@ -4,7 +4,7 @@ import proxyMiddleware from './plugins/proxy-middleware.mjs';
 // https://astro.build/config
 export default /** @type {import('astro').AstroUserConfig} */ defineConfig({
   integrations: [
-    proxyMiddleware("/shield", {
+    proxyMiddleware("/shield-develop", {
       target: "https://hukde-de.web.dmz.tuhuk.de",
       changeOrigin: true,
     }),

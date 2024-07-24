@@ -1,4 +1,5 @@
 ---
+import ColoredSection from "../components/ColoredSection.astro";
 import Header from "../components/Header.astro";
 import Stage from "../components/Stage.astro";
 import Layout from "../layouts/Layout.astro";
@@ -8,7 +9,7 @@ import Layout from "../layouts/Layout.astro";
     <Header />
     <Stage />
     <main>
-        <div class="s:container s:py-8">
+        <ColoredSection>
             <div class="s:d-grid">
                 <div style="--col:12; --col-md: 6;">
                     <div class="s:text-hyphens s:prose s:marker-bullet">
@@ -25,59 +26,65 @@ import Layout from "../layouts/Layout.astro";
                     <img src="/media/team-hukhilft.jpg" alt="Team von HUKhilft" width="708" height="393" />
                 </div>
             </div>
-        </div>
+        </ColoredSection>
         
-        <div class="s:bg-highlight-subdued">
-            <div class="s:container s:py-8 s:prose">
-                <h2 class="s:text-center">Wen wir fördern</h2>
-                <div class="s:d-grid">
-                    <div class="s:clearfix" style="--col:12; --col-md: 8;">
-                        <div class="s:float-right s:mt-1 s:ml-4 s:md:d-hidden">
-                            <img src="/media/rlv.svg" width="100" height="100">
-                        </div>
-                        <ul class="s:marker-check">
-                            <li class="s:my-2">
-                                Sie sind <b>unverschuldet</b> in eine ihreExistenz gefährden denoch bestehende, außergewöhnliche <b>wirtschaftliche Notlage</b>geraten.
-                            </li>
-                            <li class="s:my-2">
-                                Sie sindinfolgeihres <b>körperlichen, geistigen oder seelischen Zustandes</b> auf die <b>Hilfe</b> anderer angewiesen.
-                            </li>
-                            <li class="s:my-2">
-                                Sie könnendie<b> finanziellen Belastungen</b> des Alltagsnicht mehr miteigenen Mittelnoder gesetzlichenLeistungen erfüllen.
-                            </li>
-                            <li class="s:my-2">
-                                Antragsberechtigtsindgrundsätzlich<b>natürliche Personen</b> bzw. <b>private Haushalte</b>.
-                            </li>
-                        </ul>
+        <ColoredSection class="s:bg-primary-subdued">
+            <h2 class="s:text-center">Wen wir fördern</h2>
+            <div class="s:d-grid">
+                <div class="s:clearfix" style="--col:12; --col-md: 8;">
+                    <div class="s:float-right s:mt-1 s:ml-4 s:md:d-hidden">
+                        <img src="/media/rlv.svg" width="100" height="100">
                     </div>
-                    <div style="--col:12; --col-md: 4;" class="s:d-hidden s:md:d-flex s:items-center s:justify-end">
-                        <img src="/media/rlv.svg" width="200" height="200">
-                    </div>
+                    <ul class="s:marker-check">
+                        <li class="s:my-2">
+                            Sie sind <b>unverschuldet</b> in eine ihreExistenz gefährden denoch bestehende, außergewöhnliche <b>wirtschaftliche Notlage</b>geraten.
+                        </li>
+                        <li class="s:my-2">
+                            Sie sindinfolgeihres <b>körperlichen, geistigen oder seelischen Zustandes</b> auf die <b>Hilfe</b> anderer angewiesen.
+                        </li>
+                        <li class="s:my-2">
+                            Sie könnendie<b> finanziellen Belastungen</b> des Alltagsnicht mehr miteigenen Mittelnoder gesetzlichenLeistungen erfüllen.
+                        </li>
+                        <li class="s:my-2">
+                            Antragsberechtigtsindgrundsätzlich<b>natürliche Personen</b> bzw. <b>private Haushalte</b>.
+                        </li>
+                    </ul>
+                </div>
+                <div style="--col:12; --col-md: 4;" class="s:d-hidden s:md:d-flex s:items-center s:justify-end">
+                    <img src="/media/rlv.svg" width="200" height="200">
                 </div>
             </div>
-        </div>
+        </ColoredSection>
 
-        <div class="s:bg-primary-subdued">
-            <div class="s:container s:py-8 s:prose">
-                <h2 class="s:text-center">Antrag stellen</h2>
-                <p>
-                    Wenn Sie <b>Unterstützung</b> bei „HUK hilft“ beantragen möchten, können Sie uns hier Ihre <b>Notlage schildern</b>. 
-                    Bitte beschreiben Sie uns das<b> so genau wie möglich</b>. Es ist wichtig für uns zu erkennen, um welche Notlage es geht und 
-                    wie wir helfen können, diese zu beheben.
-                </p>
-                <p>
-                    Weiter sind wir so in der Lage zu <b>prüfen</b>, ob Ihr Antrag unseren <b>Förderrichtlinien entspricht</b>. Wenn Ihre Situation unseren 
-                    Förderrichtlinien entspricht, werden wir Ihnen einen <b>Antrag schicken</b>. Ihre Angaben aus diesem Antrag brauchen wir dringend, 
-                    da wir alle <b>steuerrechtlichen Vorschriften</b> erfüllen müssen.
-                </p>
-                <p>
-                    Wir werden Sie <b>zeitnah informieren</b>, auch wenn Ihr Antrag nicht unseren <b>Förderrichtlinien entspricht</b>.
-                </p>
-                <div class="s:d-flex s:justify-end">
-                    <s-button  url="/hukinfo/af/form.html?formname=/huk-hilft/antrag-anfordern" size="lg" color="primary" variant="filled">Antrag anfordern</s-button>
+        <ColoredSection>
+            <h2 class="s:text-center">Antrag stellen</h2>
+            <div class="s:d-grid">
+                <div style="--col:12; --col-md: 4;" class="s:d-hidden s:md:d-flex s:items-center s:justify-center">
+                    <img src="/media/vertragsuebersicht.svg" width="200" height="200">
                 </div>
+                <div class="s:clearfix" style="--col:12; --col-md: 8;">
+                    <div class="s:float-right s:mt-1 s:ml-4 s:md:d-hidden">
+                        <img src="/media/vertragsuebersicht.svg" width="100" height="100">
+                    </div>
+                    <p>
+                        Wenn Sie <b>Unterstützung</b> bei „HUK hilft“ beantragen möchten, können Sie uns hier Ihre <b>Notlage schildern</b>. 
+                        Bitte beschreiben Sie uns das<b> so genau wie möglich</b>. Es ist wichtig für uns zu erkennen, um welche Notlage es geht und 
+                        wie wir helfen können, diese zu beheben.
+                    </p>
+                    <p>
+                        Weiter sind wir so in der Lage zu <b>prüfen</b>, ob Ihr Antrag unseren <b>Förderrichtlinien entspricht</b>. Wenn Ihre Situation unseren 
+                        Förderrichtlinien entspricht, werden wir Ihnen einen <b>Antrag schicken</b>. Ihre Angaben aus diesem Antrag brauchen wir dringend, 
+                        da wir alle <b>steuerrechtlichen Vorschriften</b> erfüllen müssen.
+                    </p>
+                    <p>
+                        Wir werden Sie <b>zeitnah informieren</b>, auch wenn Ihr Antrag nicht unseren <b>Förderrichtlinien entspricht</b>.
+                    </p>
+                </div>
+            </div>           
+            <div class="s:d-flex s:justify-end">
+                <s-button  url="/hukinfo/af/form.html?formname=/huk-hilft/antrag-anfordern" size="lg" color="primary" variant="filled">Antrag anfordern</s-button>
             </div>
-        </div>
+        </ColoredSection>
 
 
 
